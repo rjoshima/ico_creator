@@ -1,18 +1,22 @@
 <template>
-  <div>
-    {{ title }}
-  </div>
+  <form>
+    <input type="name" placeholder="name" />
+    <input type="total" placeholder="total" />
+    <button type="submit" @click="exec">submit</button>
+  </form>
 </template>
 
 <style>
 </style>
 
 <script>
-  export default {
-    data() {
-      return({
-        title: 'Hello World',
-      });
-    },
+export default {
+  name: 'HelloWorld',
+  methods: {
+    exec: function () {
+      // 本来はajax通信をする
+      console.log('exec')
+    }
   }
+}
 </script>
