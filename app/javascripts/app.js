@@ -1,10 +1,5 @@
 import Vue from 'vue/dist/vue.esm.js';
-import MyApp from './MyApp.vue';
+import Hello from './vue/MyApp.vue'
 
-new Vue({
-  el: '#app',
-  components: {
-    MyApp,
-  },
-  template: '<my-app></my-app>',
-});
+const app = new Vue(Hello);
+app.$mount('#app');

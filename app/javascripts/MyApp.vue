@@ -1,22 +1,23 @@
 <template>
-  <form>
-    <input type="name" placeholder="name" />
-    <input type="total" placeholder="total" />
-    <button type="submit" @click="exec">submit</button>
-  </form>
+  <p>
+    {{ greeting }} World!
+  </p>  
 </template>
 
-<style>
-</style>
-
 <script>
-export default {
-  name: 'HelloWorld',
-  methods: {
-    exec: function () {
-      // 本来はajax通信をする
-      console.log('exec')
+  module.exports = {
+    data: function() {
+      return {
+        greeting: 'Hello',
+      }
     }
   }
-}
 </script>
+
+<style scoped>
+  p {
+    font-size: 2em;
+    text-align: center;
+    color: #2e9afe;
+  }
+</style>
