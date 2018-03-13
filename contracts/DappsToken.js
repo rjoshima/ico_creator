@@ -1,6 +1,8 @@
 var DappsToken = artifacts.require("./DappsToken.sol");
 
-module.exports = function (deployer) {
+
+// ここはinputでformからpostが走ったらnode.jsでtruffle developのshellを実行するようにするか
+module.exports = (deployer) => {
     const initialSupply = ""
     const tokenName = ""
     const decimalUnits = ""
