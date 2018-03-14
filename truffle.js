@@ -20,7 +20,7 @@ module.exports = {
 //         );
 //       },
 //     network_id: 1,
-//     from: "イーサアドレス",  //入れたほうが良い。
+//     from: "イーサアドレス",  //自前かuserのetheを入力、自前の場合formにetheアドレス入力欄を設ける
 //    gas: 3000000  // Different than the default below　単位はgasです。rogstenでgas料チェック。
 //    gasPrice: 10000000000 //1gway.https://ethstats.net/だと20gway 12-27現在
 //     }
