@@ -1,5 +1,6 @@
-import Vue from 'vue/dist/vue.esm.js';
-import Hello from './MyApp.vue'
-
-const app = new Vue(Hello);
-app.$mount('#app');
+new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue.js!'
+  }
+})
