@@ -9,11 +9,14 @@ var DappsToken = artifacts.require("./DappsToken.sol");
 //     const tokenSymbol = ""
 //     deployer.deploy(DappsToken, initialSupply, tokenName, decimalUnits, tokenSymbol);
 // }
+// デプロイに必要なGasを問い合わせる
+// let gasEstimate = web3.eth.estimateGas({data: bytecode});
 
+// のちdeployはweb3ベースで書き換え
 module.exports = (deployer) => {
     const initialSupply = 100
-    const tokenName = "firstname"
+    const tokenName = "hogename"
     const decimalUnits = 18
-    const tokenSymbol = "FN"
+    const tokenSymbol = "HN"
     deployer.deploy(DappsToken, initialSupply, tokenName, decimalUnits, tokenSymbol);
 }
