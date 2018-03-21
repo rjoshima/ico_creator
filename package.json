@@ -7,7 +7,13 @@
     "test": "test"
   },
   "scripts": {
-    "start": "parcel ./app/index.html --public-url /"
+    "start": "parcel ./app/index.html --public-url /",
+    "install": "truffle install",
+    "compile": "truffle compile",
+    "test": "npm run lint ./ && truffle test",
+    "fix": "eslint --fix",
+    "lint": "eslint",
+    "publish": "truffle publish"
   },
   "keywords": [],
   "author": "",
@@ -26,6 +32,7 @@
     "eslint-plugin-vue": "^4.3.0",
     "file-loader": "^1.1.11",
     "fs": "0.0.1-security",
+    "ganache-cli": "^6.1.0",
     "node-sass": "^4.7.2",
     "parcel-bundler": "^1.6.2",
     "parcel-plugin-eslint": "^1.0.3",
