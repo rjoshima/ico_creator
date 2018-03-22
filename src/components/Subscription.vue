@@ -68,7 +68,7 @@
 
   export default {
     data: () => ({
-      schema: require('../schema/newsletter'),
+      schema: require('@/schema/newsletter'),
       model: {}
     }),
     methods: {

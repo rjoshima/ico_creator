@@ -1,11 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>vue-json-schema-demo</title>
+    <title>//vuejsexamples.net</title>
+    <!-- include vue -->
+    <script src="https://unpkg.com/vue"></script>   
+    <script type="text/javascript" src="https://unpkg.com/vue-form-generator@2.0.0"></script>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/vue-form-generator@2.0.0/dist/vfg.css">
+    <script type="text/javascript" src="https://rawgit.com/fergaldoyle/vue-form/master/dist/vue-form.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">  
   </head>
   <body>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
+ 
+ <div id="app" class="container py-5">
+ <div class="panel panel-default">
+  <div class="panel-heading">Vue.js form example</div>
+  <div class="panel-body">
+   
+    <vue-form :state="formstate" v-model="formstate" @submit.prevent="onSubmit">
+ 
+      <validate auto-label class="form-group required-field" :class="fieldClassName(formstate.name)">
+        <label>Name</label>
+        <input type="text" name="name" class="form-control" required v-model.lazy="model.name">
+ 
+        <field-messages name="name" show="$touched || $submitted" class="form-control-feedback">
+          <div>Success!</div>
+          <div slot="required">Name is a required field</div>
+        </field-messages>
+ 
+      </validate>
+ 
+      <validate auto-label class="form-group required-field" :class="fieldClassName(formstate.email)">
+        <label>Email</label>
+        <input type="email" name="email" class="form-control" required v-model.lazy="model.email">
+ 
+        <field-messages auto-label name="email" show="$touched || $submitted" class="form-control-feedback">
+          <div>Success!</div>
+          <div slot="required">Email is a required field</div>
+          <div slot="email">Email is invalid</div>
+        </field-messages>
+ 
+      </validate>
+ 
+      <validate auto-label class="form-group required-field" :class="fieldClassName(formstate.phone)">
+        <label>Phone number (format: xxxx-xxx-xxxx)</label>
+        <input type="tel" name="phone" class="form-control" required pattern="^\d{4}-\d{3}-\d{4}$" v-model.lazy="model.phone">
+ 
+        <field-messages name="phone" show="$touched || $submitted" class="form-control-feedback">
+          <div>Success!</div>
+          <div slot="required">Phone number is a required field</div>
+          <div slot="pattern">Phone number is invalid</div>
+        </field-messages>
+ 
+      </validate>
+ 
+      <validate auto-label class="form-group required-field" :class="fieldClassName(formstate.department)">
+        <label>Department</label>
+ 
+        <select class="form-control" name="department" required v-model.lazy="model.department">
+          <option :value="null">Choose...</option>
+          <option value="1">AAA</option>
+          <option value="2">BBB</option>
+          <option value="3">CCC</option>
+        </select>
+ 
+        <field-messages name="department" show="$touched || $dirty || $submitted" class="form-control-feedback">
+          <div>Success!</div>
+          <div slot="required">Department is a required field</div>
+        </field-messages>
+ 
+      </validate>
+      
+          <div class="py-2 text-center">
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </div>
+    </vue-form>
+ 
+        </div>
+      </div>
+    </div>
+  </div>
   </body>
+  <script src="./app.js"></script>
 </html>
