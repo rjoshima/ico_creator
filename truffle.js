@@ -3,6 +3,16 @@ module.exports = {
   // to customize your Truffle configuration!
 };
 
+
+// const HDWalletProvider = require('truffle-hdwallet-provider');
+
+// const providerWithMnemonic = (mnemonic, rpcEndpoint) =>
+//   new HDWalletProvider(mnemonic, rpcEndpoint);
+
+// const infuraProvider = network => providerWithMnemonic(
+//   process.env.MNEMONIC || '',
+//   `https://${network}.infura.io/${process.env.INFURA_API_KEY}`
+// );
 // const HDWalletProvider = require('truffle-hdwallet-provider');
 // const fs = require('fs');
 // const accessToken = "インフラアクセストークン; //httpsはいらない。最後のアクセスキーだけいれる。
