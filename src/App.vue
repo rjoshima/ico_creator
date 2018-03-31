@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="apps">
     <Subscription/>
   </div>
 </template>
@@ -8,7 +8,7 @@
 import Subscription from './components/Subscription'
 
 export default {
-  name: 'app',
+  name: 'apps',
   components: {
     Subscription
   }

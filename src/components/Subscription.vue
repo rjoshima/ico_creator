@@ -81,6 +81,9 @@
             // You can submit your model to the server here
             console.log(JSON.stringify(this.model))
             this.$refs.formSchema.clearErrorMessage()
+
+            // ここにweb3の処理を書く
+            
           } else {
             this.$refs.formSchema.setErrorMessage('Please fill out the required fields')
             return false
